@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { useStoreContext } from '../../utils/GlobalState';
-import {
-  UPDATE_CATEGORIES,
-  UPDATE_CURRENT_CATEGORY,
-} from '../../utils/actions';
+import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY, CLEAR_CURRENT_CATEGORY } from '../../utils/actions';
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
+import { Link } from "react-router-dom";
 
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
@@ -35,6 +33,10 @@ function CategoryMenu() {
   }, [categoryData, loading, dispatch]);
 
   const handleClick = (id) => {
+    if(id === 'clear'){
+      window.location.reload();
+      return;
+    }
     dispatch({
       type: UPDATE_CURRENT_CATEGORY,
       currentCategory: id,
@@ -44,6 +46,13 @@ function CategoryMenu() {
   return (
     <div>
       <h2>Choose a Category:</h2>
+      { <button         
+          key='clear'
+          onClick={() => {
+            handleClick('clear');
+          }}>
+            X
+      </button> }
       {categories.map((item) => (
         <button
           key={item._id}

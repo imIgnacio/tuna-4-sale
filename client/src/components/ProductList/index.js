@@ -55,7 +55,6 @@ function ProductList() {
               image={product.image}
               name={product.name}
               price={product.price}
-              quantity={product.quantity}
             />
           ))}
         </div>
