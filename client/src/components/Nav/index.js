@@ -1,6 +1,7 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import TUNALOGO from '../../utils/images/tuna-logo.png';
 
 function Nav() {
 
@@ -41,12 +42,11 @@ function Nav() {
 
   return (
     <header className="flex-row px-1">
-      <h1>
+      <div>
         <Link to="/">
-          <span role="img" className="lemon" aria-label="lemon icon">🍋</span>
-          Tuna 4 Sale
+          <img className="tuna-logo" src={TUNALOGO} alt="Tuna 4 Sale"/>
         </Link>
-      </h1>
+      </div>
 
       <nav>
         {showNavigation()}

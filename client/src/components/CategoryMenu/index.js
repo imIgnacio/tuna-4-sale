@@ -44,7 +44,7 @@ function CategoryMenu() {
   };
 
   return (
-    <div>
+    <div className='filters'>
       <h2>Choose a Category:</h2>
       { <button         
           key='clear'

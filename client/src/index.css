@@ -1,5 +1,5 @@
 :root {
-  --primary: #7158e2;
+  --primary: #ff4d4d;
   --secondary: #ffaf40;
   --tertiary: #B12704;
   --light: #fafafa;
@@ -85,10 +85,15 @@ a:hover {
 
 header {
   background: var(--primary);
+  align-items: center;
 }
 
 header a {
   color: var(--light);
+}
+
+.filters {
+  text-align: center;
 }
 
 button {
@@ -114,6 +119,12 @@ button[disabled] {
 
 img {
   max-width: 100%;
+}
+
+.tuna-logo {
+  max-width: auto;
+  max-height: 80px;
+  margin: 10px 0;
 }
 
 span[role="img"] {
