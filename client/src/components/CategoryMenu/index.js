@@ -51,7 +51,7 @@ function CategoryMenu() {
           onClick={() => {
             handleClick('clear');
           }}>
-            X
+            ❌
       </button> }
       {categories.map((item) => (
         <button

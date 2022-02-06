@@ -206,6 +206,11 @@ ul.flex-row{
 .card {
   width: 25%;
   text-align: center;
+  transition: 1s;
+}
+
+.card:hover {
+  transform: scale(1.25);
 }
 
 .error-text {
