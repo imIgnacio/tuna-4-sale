@@ -43,7 +43,7 @@ function Nav() {
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
-          <span role="img" aria-label="lemon icon">🍋</span>
+          <span role="img" className="lemon" aria-label="lemon icon">🍋</span>
           Tuna 4 Sale
         </Link>
       </h1>

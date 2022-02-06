@@ -1,6 +1,6 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
+  --primary: #7158e2;
+  --secondary: #ffaf40;
   --tertiary: #B12704;
   --light: #fafafa;
   --dark: #272f32;
@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+ul {
+  list-style-type: none;
+}
+
 html,
 body {
   min-height: 100%;
@@ -21,7 +25,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
@@ -144,6 +148,11 @@ input:focus {
 .flex-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ul.flex-row{
+  margin-right: 70px;
 }
 
 .space-between {
